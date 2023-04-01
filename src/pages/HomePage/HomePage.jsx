@@ -2,6 +2,7 @@ import React from 'react'
 import "./HomePage.scss";
 import { banner_image } from '../../utils/images';
 import Title from '../../components/Title/Title';
+import Users from '../../components/Users/Users';
 
 const HomePage = () => {
 
@@ -22,6 +23,7 @@ const HomePage = () => {
                 <div className='container'>
                     <div className='section-content'>
                         <Title title="Blogs" color={"#0D1741"} />
+                        {<Users />}
                     </div>
                 </div>
             </section>
