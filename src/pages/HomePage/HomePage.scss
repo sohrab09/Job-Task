@@ -1,0 +1,13 @@
+@import "../../App.scss";
+
+.header-content {
+  min-height: 60vh;
+  .header-title {
+    font-size: 36px;
+    max-width: 600px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 28px;
+    }
+  }
+}
