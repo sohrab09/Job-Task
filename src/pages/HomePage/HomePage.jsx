@@ -3,8 +3,12 @@ import "./HomePage.scss";
 import { banner_image } from '../../utils/images';
 import Title from '../../components/Title/Title';
 import Users from '../../components/Users/Users';
+import useUsers from '../../Hooks/useUsers';
 
 const HomePage = () => {
+
+    const users = useUsers();
+    // console.log("users home page ------>>>>>>>", users);
 
     return (
         <div className="main-holder bg-light-blue">
@@ -23,7 +27,7 @@ const HomePage = () => {
                 <div className='container'>
                     <div className='section-content'>
                         <Title title="Blogs" color={"#0D1741"} />
-                        {<Users />}
+                        {<Users users={users} />}
                     </div>
                 </div>
             </section>
