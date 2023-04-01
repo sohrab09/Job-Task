@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./Users.scss";
-import { Link } from 'react-router-dom';
 import Pagination from '../Pagination/Pagination';
+import { useNavigate } from "react-router-dom";
 
 const Users = ({ users }) => {
 
@@ -11,7 +11,7 @@ const Users = ({ users }) => {
     const [paginate, setPaginate] = useState(1 * userLimit);
     const paginateHandler = (value) => setPaginate(value * userLimit);
 
-
+    const navigate = useNavigate();
 
     return (
         <>
@@ -31,12 +31,15 @@ const Users = ({ users }) => {
                                 <div className='blog-item-id'>{user.phone}</div>
                                 <div className='blog-item-id'>B.G: {user.bloodGroup}</div>
                                 <div className='blog-item-btn'>
-                                    <Link
+                                    <div
+                                        style={{ cursor: "pointer" }}
                                         className="read-more-btn font-rubik fw-4"
-                                        to={`/users/${user.id}`}
+                                        onClick={() => navigate(`/users/${user.id}`, {
+                                            state: user
+                                        })}
                                     >
                                         Read More
-                                    </Link>
+                                    </div>
                                 </div>
                             </div>
                         )
