@@ -12,7 +12,7 @@ const useUser = (id) => {
                 axios.get(`https://dummyjson.com/users/${id}/posts`)
                     .then((res) => {
                         // console.log("res", res.data.users);
-                        setUser(res.data);
+                        setUser(res.data.posts);
                         setLoading(false);
                     })
             } catch (error) {
