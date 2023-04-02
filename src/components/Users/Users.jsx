@@ -38,7 +38,7 @@ const Users = ({ users }) => {
                                     <div
                                         style={{ cursor: "pointer" }}
                                         className="read-more-btn font-rubik fw-4"
-                                        onClick={() => navigate(`/users/${user.id}`, {
+                                        onClick={() => navigate(`/user/${user.id}`, {
                                             state: user
                                         })}
                                     >
