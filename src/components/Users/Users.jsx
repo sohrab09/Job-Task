@@ -19,17 +19,21 @@ const Users = ({ users }) => {
 
                 {
                     users?.slice(paginate - 6, paginate).map((user, index) => {
+                        //console.log("user -------->>>>>>>>> ", user);
                         return (
                             <div className="blog-item" key={index}>
                                 <img src={user.image} alt="userImage" className='user-image' />
-                                <div className='blog-item-id fw-5 font-rubik'>{user.id}</div>
-                                <div className='blog-item-title fw-5 fs-18 font-rubik'>{user.firstName} {user.lastName}</div>
-                                <div className='blog-item-id fs-18 font-rubik'>{user.company.title}</div>
-                                <div className='blog-item-id fs-18 font-rubik'>{user.company.name}</div>
-                                <div className='blog-item-id fs-18 font-rubik'>{user.company.department}</div>
-                                <div className='blog-item-id'>{user.email}</div>
-                                <div className='blog-item-id'>{user.phone}</div>
-                                <div className='blog-item-id'>B.G: {user.bloodGroup}</div>
+                                <div className='blog-item-id fw-5 font-rubik mb-1'>{user.id}</div>
+                                <div className='blog-item-title fw-5 fs-18 font-rubik mb-1'>{user.firstName} {user.lastName}</div>
+                                <div className='blog-item-id fs-18 font-rubik mb-1'>{user.company.title}</div>
+                                <div className='blog-item-id fs-18 font-rubik mb-1'>{user.company.name}</div>
+                                <div className='blog-item-id fs-18 font-rubik mb-1'>{user.company.department}</div>
+                                <div className='blog-item-id fs-18 font-rubik mb-1'>{user.company.address.address}</div>
+                                <div className='blog-item-id fs-18 font-rubik mb-1'>{user.company.address.city}</div>
+                                <div className='blog-item-id mb-1'>{user.email}</div>
+                                <div className='blog-item-id mb-1'>{user.phone}</div>
+                                <div className='blog-item-id mb-1'>{user.university}</div>
+                                <div className='blog-item-id mb-1'>B.G: {user.bloodGroup}</div>
                                 <div className='blog-item-btn'>
                                     <div
                                         style={{ cursor: "pointer" }}
