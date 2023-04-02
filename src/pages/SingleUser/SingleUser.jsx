@@ -5,7 +5,6 @@ import { BiUser } from 'react-icons/bi';
 
 
 const SingleUser = ({ user }) => {
-    console.log("user ------>>>>>>>", user);
     return (
         <div className='blog-single mt-5'>
             <div className='blog-single-l'>
