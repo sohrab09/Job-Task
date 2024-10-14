@@ -19,7 +19,11 @@ const SingleUser = ({ user }) => {
                                     </div>
                                     <div className='blog-info-item flex align-center'>
                                         <MdOutlineAddReaction className='text-mid-blue' />
-                                        <span className='blog-info-item-text font-rubik fw-5'>{user.reactions}</span>
+                                        <span className='blog-info-item-text font-rubik fw-5'>{user.reactions.likes}</span>
+                                    </div>
+                                    <div className='blog-info-item flex align-center'>
+                                        <MdOutlineAddReaction className='text-mid-blue' />
+                                        <span className='blog-info-item-text font-rubik fw-5'>{user.reactions.dislikes}</span>
                                     </div>
                                 </div>
 
